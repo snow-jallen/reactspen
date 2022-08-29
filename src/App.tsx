@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+import DemoQuery from './Components/DemoQuery';
+ 
+const queryClient = new QueryClient()
 
 function App() {
   return (
@@ -19,6 +23,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <p>Demo query</p>
+      <DemoQuery />
+      <p>end of demo query</p>
     </div>
   );
 }
